@@ -7,7 +7,7 @@ class Compte {
     private string $deviseMonetaire;
     private Titulaire $titulaire;
 
-    public function __construct(string $libellé, float $soldeInitial, string $deviseMonetaire, string $titulaireUnique, Titulaire $titulaire) {
+    public function __construct(string $libellé, float $soldeInitial, string $deviseMonetaire, Titulaire $titulaire) {
         $this->libellé = $libellé;
         $this->soldeInitial = $soldeInitial;
         $this->deviseMonetaire = $deviseMonetaire;
@@ -52,7 +52,7 @@ class Compte {
     }
 
     public function __toString() {
-        return $this->$libellé." ".$this->soldeInitial." ".$this->deviseMonetaire." ".$this->titulaireUnique;
+        return $this->$libellé." ".$this->soldeInitial." ".$this->deviseMonetaire;
     }
     
 }

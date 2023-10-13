@@ -65,6 +65,14 @@ class Titulaire {
         $this->comptes[] = $compte;
     }
 
+    public function afficherTitcompte() {
+        $result ="<h2>Compte(s) bancaire de :</h2><br>$this<br>";
+        foreach ($this->comptes as $compte) {
+            $result .="<br>".$compte->getLibellé()." :".$compte->getSoldeInitial()." ".$compte->getDeviseMonetaire()." <br>";
+        }
+        return $result;
+    }
+
     public function __toString() {
         return $this->nom." ".$this->prenom." ".$this->dateNaissance->format("Y")." ".$this->ville;
     }

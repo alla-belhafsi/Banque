@@ -51,6 +51,16 @@ class Compte {
         return $this;
     }
 
+    public function crediter($montant) {
+        $this->soldeInitial += $montant;
+        return $this;
+    }
+
+    public function debiter($montant) {
+        $this->soldeInitial -= $montant;
+        return $this;
+    }
+
     public function __toString() {
         return $this->$libellé." ".$this->soldeInitial." ".$this->deviseMonetaire;
     }

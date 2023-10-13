@@ -17,6 +17,10 @@ $com2 = new Compte("Compte courant", 654, "€", $tit2);
 $com3 = new Compte("Compte courant", 133, "€", $tit3);
 $com4 = new compte("Livret A", 924, "€", $tit3);
 
+// Crediter/Debiter
+//$com1->crediter(50);
+//$com4->crediter(50);
+
 // Echos
 echo $tit1->afficherTitcompte();
 echo $tit2->afficherTitcompte();

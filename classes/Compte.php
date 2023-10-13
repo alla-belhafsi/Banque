@@ -61,6 +61,13 @@ class Compte {
         return $this;
     }
 
+    public function virement($debiter, $crediter) {
+        $this->$debiter;
+        $titulaire->crediter;
+        return $this;
+        
+    }
+
     public function __toString() {
         return $this->$libellé." ".$this->soldeInitial." ".$this->deviseMonetaire;
     }

@@ -61,8 +61,7 @@ class Compte {
         return $this;
     }
 
-    public  $montant;
-    function virement(float $montant, Compte $compteCible) {
+    public function virement(float $montant, Compte $compteCible) {
         $this->debiter($montant);
         $compteCible->crediter($montant);
         return $this;

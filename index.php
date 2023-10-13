@@ -22,7 +22,7 @@ $com4 = new compte("Livret A", 924, "€", $tit3);
 //$com4->crediter(50);
 
 // Virement
-$com1->virement(50, $com3);
+$com1->virement(50, $com2);
 
 // Echos
 echo $tit1->afficherTitcompte();

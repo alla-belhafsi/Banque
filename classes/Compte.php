@@ -5,14 +5,12 @@ class Compte {
     private string $libellé;
     private float $soldeInitial;
     private string $deviseMonetaire;
-    private string $titulaireUnique;
     private Titulaire $titulaire;
 
     public function __construct(string $libellé, float $soldeInitial, string $deviseMonetaire, string $titulaireUnique, Titulaire $titulaire) {
         $this->libellé = $libellé;
         $this->soldeInitial = $soldeInitial;
         $this->deviseMonetaire = $deviseMonetaire;
-        $this->titulaireUnique = $titulaireUnique;
         $this->titulaire = $titulaire;
         $this->titulaire->addCompte($this);
     }
@@ -41,15 +39,6 @@ class Compte {
 
     public function setDeviseMonetaire($deviseMonetaire) {
         $this->deviseMonetaire = $deviseMonetaire;
-        return $this;
-    }
-
-    public function getTitulaireUnique(): string {
-        return $this->titulaireUnique;
-    }
-
-    public function setTitulaireUnique($titulaireUnique) {
-        $this->titulaireUnique = $titulaireUnique;
         return $this;
     }
 

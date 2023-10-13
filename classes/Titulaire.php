@@ -13,7 +13,7 @@ class Titulaire {
         $this->prenom = $prenom;
         $this->dateNaissance = new DateTime($dateNaissance);
         $this->ville = $ville;
-        $this->compte = [];
+        $this->comptes = [];
     }
 
     public function getNom(): string {

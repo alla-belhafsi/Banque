@@ -8,8 +8,8 @@ spl_autoload_register(function ($class_name) {
 
 // Titulaires
 $tit1 = new Titulaire("MURMANN", "Mickael", "13-12-1988", "STRASBOURG");
-$tit2 = new Titulaire("MATTHIEU", "Quentin", "17-04-1988", "STRASBOURG");
-$tit3 = new Titulaire("SCHMIDT", "Marina", "05-04-1992", "MONTPELLIER");
+$tit2 = new Titulaire("MATTHIEU", "Quentin", "17-11-1988", "STRASBOURG");
+$tit3 = new Titulaire("SCHMIDT", "Alicia", "05-04-1992", "MONTPELLIER");
 
 // Comptes
 $com1 = new Compte("Compte courant", 824, "€", $tit1);
@@ -22,9 +22,12 @@ $com4 = new compte("Livret A", 924, "€", $tit3);
 //$com4->crediter(50);
 
 // Virement
-$com1->virement(50, $com2);
+//$com1->virement(50, $com2);
 
 // Echos
 echo $tit1->afficherTitcompte();
 echo $tit2->afficherTitcompte();
 echo $tit3->afficherTitcompte();
+
+//echo $tit1;
+

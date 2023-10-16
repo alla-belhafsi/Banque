@@ -66,15 +66,29 @@ class Titulaire {
     }
 
     public function afficherTitcompte() {
-        $result ="<h2>Compte(s) bancaire de :</h2><br>$this<br>";
+        $result ="<br><br>Compte";
+
+        if(sizeof($this->comptes)> 1){
+            $result .= "s";
+        }
+        
+        $result .=  " de <b>".$this->prenom." ".$this->nom."</b> (".$this->dateNaissance->diff(new DateTime)->format('%y')." ans)"."</b><br>".sizeof($this->comptes)." ";
+        
+        if(sizeof($this->comptes)< 2){
+            $result .= "compte<br><br>";
+        }
+            
+        elseif(sizeof($this->comptes)>1) {
+            $result .= "comptes<br><br>";
+        }
         foreach ($this->comptes as $compte) {
-            $result .="<br>".$compte->getLibellé()." :".$compte->getSoldeInitial()." ".$compte->getDeviseMonetaire()." <br>";
+            $result .="<li>".$compte->getLibellé()." (".$compte->getSoldeInitial()." ".$compte->getDeviseMonetaire().")</li>";
         }
         return $result;
     }
 
     public function __toString() {
-        return $this->nom." ".$this->prenom." ".$this->dateNaissance->format("Y")." ".$this->ville;
+        return $this->nom." ".$this->prenom." (".$this->dateNaissance->diff(new DateTime)->format('%y')." ans)"." ".$this->ville;
     }
 
 

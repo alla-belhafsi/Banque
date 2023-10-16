@@ -65,7 +65,6 @@ class Compte {
         $this->debiter($montant);
         $compteCible->crediter($montant);
         return $this;
-        
     }
 
     public function __toString() {
